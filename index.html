@@ -16,8 +16,13 @@
   #cache { font-size:12px; color:#5c6672; margin:0 0 10px; min-height:14px; }
   #cache.cacheok { color:#7fd0a0; }
   .ok { color:#7fd0a0; } .bad { color:#d08a7f; } .warn { color:#d8c07f; }
-  #brand { text-align:center; padding:8px 10px; background:#0e1116;
-           border-bottom:1px solid #1e2732; }
+  #brand {
+    text-align: center;
+    padding: 8px 10px;
+    background: #0e1116;
+    border-bottom: 1px solid #1e2732;
+    width: 100%;
+}
   #brand img { width:28px; height:28px; margin-right:8px; border-radius:50%;
                vertical-align:middle; }
   #brand b { font-size:15px; font-weight:700; letter-spacing:.14em;
@@ -25,9 +30,12 @@
 </style>
 </head>
 <body>
-<div id="brand">
-<img style="vertical-align:middle; border-radius:0; width:175px; height:193px;" src="logo.png" alt="">
-<p style="vertical-align:middle;">RAZOUANE MIDOUN</p>
+<div style="display: flex; align-items: center; align-content: center;" id="brand">
+<img style="vertical-align: middle; border-radius: 0; width: 175px; margin-right: 8px; margin-left: auto; height: 193px;" src="logo.png" alt="">
+<p style="vertical-align: middle; margin-top: auto; margin-right: auto; margin-left: 8px; margin-bottom: auto; text-align: left; letter-spacing: .14em;">
+	RAZOUANE MIDOUN<br>RUE MAROC<br>DJERBA MIDOUN<br>75757575
+
+</p>
 </div>
 <div id="wrap">
   <div id="state">detecting firmware...</div>
