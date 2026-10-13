@@ -1,164 +1,154 @@
 <!doctype html>
 <html lang="en" manifest="cache.appcache">
-  
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>RAZOUANE GAMES</title>
-    <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        min-height: 100%;
-        background: #0b0d10;
-        color: #c8ced8;
-        font:
-          15px/1.45 "Segoe UI",
-          system-ui,
-          sans-serif;
-      }
-      #brand {
-        text-align: center;
-        padding: 8px 10px;
-        background: #0e1116;
-        border-bottom: 1px solid #1e2732;
-      }
-      #brand img {
-        width: 28px;
-        height: 28px;
-        margin-right: 8px;
-        border-radius: 50%;
-        vertical-align: middle;
-      }
-      #brand b {
-        font-size: 15px;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        color: #e6ebf2;
-        vertical-align: middle;
-      }
-
-      /* running: a spinner under the brand. jb.js sets body.done / body.fail / body.log. */
-      #spin {
-        position: fixed;
-        top: calc(50% + 20px);
-        left: 50%;
-        width: 46px;
-        height: 46px;
-        margin: -23px 0 0 -23px;
-        border: 4px solid #1e2732;
-        border-top-color: #7fd0a0;
-        border-radius: 50%;
-        animation: spin 0.9s linear infinite;
-      }
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      #msg {
-        position: fixed;
-        top: 50%;
-        left: 0;
-        right: 0;
-        transform: translateY(-50%);
-        text-align: center;
-        font-size: 16px;
-        letter-spacing: 0.5px;
-        display: none;
-      }
-      #wrap {
-        padding: 0;
-      }
-      #state,
-      #out {
-        display: none;
-      }
-
-      body.done #spin {
-        display: none;
-      }
-      body.fail #spin {
-        display: none;
-      }
-      body.fail #msg {
-        display: block;
-      }
-      body.done #msg {
-        display: block;
-        color: #7fd0a0;
-        font-weight: 700;
-        letter-spacing: 2px;
-      }
-
-      /* ?log=1 -- the full step log, styled like the landing. */
-      body.log #spin,
-      body.log #msg {
-        display: none;
-      }
-      body.log #wrap {
-        padding: 14px 18px;
-      }
-      body.log #state {
-        display: block;
-        font-size: 22px;
-        font-weight: 700;
-        margin: 0 0 8px;
-      }
-      body.log #out {
-        display: block;
-        white-space: pre-wrap;
-        font:
-          12px/1.45 Consolas,
-          monospace;
-        background: #11151b;
-        border: 1px solid #1e2732;
-        border-radius: 5px;
-        padding: 10px 12px;
-        height: calc(100vh - 141px);
-        overflow-y: auto;
-      }
-      .ok {
-        color: #7fd0a0;
-      }
-      .bad {
-        color: #d08a7f;
-      }
-      .warn {
-        color: #d8c07f;
-      }
-      .safe {
-        color: #7fd0a0;
-      }
-      .danger {
-        color: #d08a7f;
-      }
-      code {
-        color: #9fb3d0;
-      }
-    </style>
-  </head>
-  <body>
-<div style="display: flex; align-items: center; align-content: center;" id="brand">
-<img style="vertical-align: middle; border-radius: 0; width: 175px; margin-right: 8px; margin-left: auto; height: 193px;" src="logo.png" alt="">
-<p style="vertical-align: middle; margin-top: auto; margin-right: auto; margin-left: 8px; margin-bottom: auto; text-align: left; letter-spacing: .14em; font-weight: bold; font-size: 18px;">
-	RAZOUANE MIDOUN<br>
-	RUE MAROC<br>
-	DJERBA MIDOUN<br>
-  75757575</p>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>RAZOUANE GAMES</title>
+<style>
+html, body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	background: #0b0d10;
+	color: #c8ced8;
+	font: 15px/1.45 "Segoe UI", system-ui, sans-serif;
+}
+#brand {
+	text-align: center;
+	padding: 8px 10px;
+	background: #0e1116;
+	border-bottom: 1px solid #1e2732;
+}
+#brand img {
+	width: 28px;
+	height: 28px;
+	margin-right: 8px;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+#brand b {
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	color: #e6ebf2;
+	vertical-align: middle;
+}
+/* running: a spinner under the brand. jb.js sets body.done / body.fail / body.log. */
+#spin {
+	position: fixed;
+	top: calc(50% + 20px);
+	left: 50%;
+	width: 46px;
+	height: 46px;
+	margin: -23px 0 0 -23px;
+	border: 4px solid #1e2732;
+	border-top-color: #7fd0a0;
+	border-radius: 50%;
+	animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+to {
+transform: rotate(360deg);
+}
+}
+#msg {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+	text-align: center;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	display: none;
+}
+#wrap {
+	padding: 0;
+}
+#state, #out {
+	display: none;
+}
+body.done #spin {
+	display: none;
+}
+body.fail #spin {
+	display: none;
+}
+body.fail #msg {
+	display: block;
+}
+body.done #msg {
+	display: block;
+	color: #7fd0a0;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+/* ?log=1 -- the full step log, styled like the landing. */
+body.log #spin, body.log #msg {
+	display: none;
+}
+body.log #wrap {
+	padding: 14px 18px;
+}
+body.log #state {
+	display: block;
+	font-size: 22px;
+	font-weight: 700;
+	margin: 0 0 8px;
+}
+body.log #out {
+	display: block;
+	white-space: pre-wrap;
+	font: 12px/1.45 Consolas, monospace;
+	background: #11151b;
+	border: 1px solid #1e2732;
+	border-radius: 5px;
+	padding: 10px 12px;
+	height: calc(100vh - 141px);
+	overflow-y: auto;
+}
+.ok {
+	color: #7fd0a0;
+}
+.bad {
+	color: #d08a7f;
+}
+.warn {
+	color: #d8c07f;
+}
+.safe {
+	color: #7fd0a0;
+}
+.danger {
+	color: #d08a7f;
+}
+code {
+	color: #9fb3d0;
+}
+</style>
+</head>
+<body>
+<div style="display: flex; align-items: center; align-content: center;" id="brand"> <img style="vertical-align: middle; border-radius: 5px; width: 175px; margin-right: 8px; margin-left: auto; height: 193px;" src="logo.png" alt="">
+  <p style="vertical-align: middle; margin-top: auto; margin-right: auto; margin-left: 8px; margin-bottom: auto; text-align: left; letter-spacing: 0.14em; font-weight: bold; font-size: 18px;"> RAZOUANE MIDOUN<br>
+    5 RUE MAROC<br>
+    DJERBA MIDOUN<br>
+    75757575 </p>
 </div>
-    <div id="spin"></div>
-    <div id="msg">Restart your console</div>
-    <div id="wrap">
-      <div id="state"></div>
-      <div id="out"></div>
-    </div>
-    <script type="module">
+<div id="spin"></div>
+<div id="msg">Restart your console</div>
+<div id="wrap" style="width: 100%;">
+  <div id="state"></div>
+  <div id="out"></div>
+  <div id="map" style="display: flex;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d292.49655375753383!2d10.99047523910665!3d33.808509837228975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sfr!2stn!4v1791814156457!5m2!1sfr!2stn" width="500" height="350" style="border: 1px; border-radius: 5px; margin-left: auto; margin-right: auto;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+</div>
+<script type="module">
       import "jbce31.js?v=19";
     </script>
-  </body>
+</body>
 
 <!-- Mirrored from https://raw13g.github.io/jb.html by HTTrack Website Copier/3.x [XR&CO], Thu, 08 Oct 2026 10:33:50 GMT -->
 </html>
